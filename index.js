@@ -129,15 +129,15 @@ app.post('/user', (request, res) => {
     var bloodGroup = request.body.bloodGroup;
     console.log(firstName);
 
-    var newUser = new user({
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: password,
-        bloodGroup: bloodGroup,
-        middleName: middleName
+//     var newUser = new user({
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         password: password,
+//         bloodGroup: bloodGroup,
+//         middleName: middleName
 
-    });
+//     });
  
 
     // newUser.save((err,result) =>{
@@ -150,45 +150,45 @@ app.post('/user', (request, res) => {
   
     // })
     
-    newUser.save().then((doc) =>{
-        // res.send(doc);
-        res.send({success: "Created new user", status: 200});
+//     newUser.save().then((doc) =>{
+//         // res.send(doc);
+//         res.send({success: "Created new user", status: 200});
 
 
 
 
 
-        // var transporter = nodemailer.createTransport({
-        //     service: 'gmail',
-        //     auth: {
-        //       user: 'galabpokh@gmail.com',
-        //       pass: 'qwerpoiu1234'
-        //     }
-        //   });
+//         // var transporter = nodemailer.createTransport({
+//         //     service: 'gmail',
+//         //     auth: {
+//         //       user: 'galabpokh@gmail.com',
+//         //       pass: 'qwerpoiu1234'
+//         //     }
+//         //   });
           
-        //   var mailOptions = {
-        //     from: 'galabpokh@gmail.com',
-        //     to: email,
-        //     subject: 'Verification Email',
-        //     text: 'That is a verification email'
-        //   };
+//         //   var mailOptions = {
+//         //     from: 'galabpokh@gmail.com',
+//         //     to: email,
+//         //     subject: 'Verification Email',
+//         //     text: 'That is a verification email'
+//         //   };
           
-        //   transporter.sendMail(mailOptions, function(error, info){
-        //     if (error) {
-        //       console.log(error);
-        //     } else {
-        //       console.log('Email sent: ' + info.response);
-        //     }
-        //   }); 
+//         //   transporter.sendMail(mailOptions, function(error, info){
+//         //     if (error) {
+//         //       console.log(error);
+//         //     } else {
+//         //       console.log('Email sent: ' + info.response);
+//         //     }
+//         //   }); 
 
 
 
 
 
 
-    }, (e) =>{
-        res.send({success: "Failed to add user", status: 500});
-    });
+//     }, (e) =>{
+//         res.send({success: "Failed to add user", status: 500});
+//     });
 
     
 });
